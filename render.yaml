@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: laravel-app
+    env: docker
+    region: oregon
+    dockerfilePath: Dockerfile
+    buildCommand: composer install && php artisan key:generate
+    startCommand: apache2-foreground
